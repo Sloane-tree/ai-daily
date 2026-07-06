@@ -1,0 +1,173 @@
+[
+  {
+    "title": "WAIC 2026模型与智能体：后Scaling时代范式重构，迈入智能体生产力时代",
+    "link": "https://www.jiqizhixin.com/articles/2026-07-06-12",
+    "published": "2026-07-06",
+    "summary": "WAIC 2026聚焦模型与智能体，探讨后Scaling时代AI范式如何从模型能力转向智能体生产力。",
+    "account": "机器之心",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "ICML 2026获奖论文揭晓：黄高团队获杰出论文，A3C算法获时间检验奖",
+    "link": "https://www.jiqizhixin.com/articles/2026-07-06-10",
+    "published": "2026-07-06",
+    "summary": "ICML 2026公布获奖名单，清华黄高团队获杰出论文奖，DeepMind的A3C算法获得十年时间检验奖。",
+    "account": "机器之心",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "WAIC 2026科学智能：AI4S从'辅助计算'到'自主发现'，中国如何重塑全球科研版图？",
+    "link": "https://www.jiqizhixin.com/articles/2026-07-06-17",
+    "published": "2026-07-06",
+    "summary": "WAIC 2026科学智能论坛探讨AI for Science从辅助工具到自主科学发现范式的转变。",
+    "account": "机器之心",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "ACL 2026｜块越大推理越差？扩散语言模型新难题被T*破解了",
+    "link": "https://www.jiqizhixin.com/articles/2026-07-05-10",
+    "published": "2026-07-05",
+    "summary": "扩散语言模型存在大块推理崩溃问题，T*方法通过渐进式块扩展策略破解了这一难题。",
+    "account": "机器之心",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "Arena估值冲上17亿美元：不造AI只靠'卖水'，8个月年入1亿",
+    "link": "https://link.baai.ac.cn/@AI_era/116870834311489284",
+    "published": "2026-07-05",
+    "summary": "伯克利Chatbot Arena商业化8个月，年化营收达1亿美元，估值冲破17亿，成为AI评测领域'卖水人'神话。",
+    "account": "新智元",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "Token经济学撕裂：单价暴跌至$0.99/百万，但AI总账单却在爆炸",
+    "link": "https://shovelready.com/shovelready/description.asp?live-blog-15550011-2026-07-04-da-kai-wang-yi-xin-wen-cha-kan-jing-cai-tu-pian-xin-zhi-yuan-bao-dao-da-kai-wang",
+    "published": "2026-07-04",
+    "summary": "SemiAnalysis实测Token成本降至$0.99/百万，但内部Token支出已占员工薪资30%。AI经济学出现最反直觉的一幕。",
+    "account": "新智元",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "Anthropic史上最严封禁：全面清洗地下通道访问Claude",
+    "link": "https://phys.sabanciuniv.edu/en/education/graduate?live-blog-15531618-2026-07-04-da-kai-wang-yi-xin-wen-cha-kan-jing-cai-tu-pian-xin-zhi-yuan-bao-dao-da-kai-wang",
+    "published": "2026-07-04",
+    "summary": "外媒曝Anthropic将全面封禁所有API中转站、境外子公司等绕过限制访问Claude的通道，史上最严清洗。",
+    "account": "新智元",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "谷歌高管用Claude Fable 5将2003年PC神作移植到iPhone",
+    "link": "https://vrijetijd.brugge.be/sport/Op+naar/bekijk/code/SAoD02?live-blog-15786817-2026-07-06-da-kai-wang-yi-xin-wen-cha-kan-jing-cai-tu-pian-xin-zhi-yuan-bao-dao-da-kai-wang",
+    "published": "2026-07-05",
+    "summary": "Google DeepMind高管用Claude Fable 5将《命令与征服：将军》原生移植到iOS，160万行C++代码经五层翻译链运行。",
+    "account": "新智元",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "大厂AI转入'基因驱动'：字节腾讯阿里不再盲从硅谷",
+    "link": "https://www.36kr.com/p/3883985820446978",
+    "published": "2026-07-06",
+    "summary": "字节全力深耕豆包超级App、腾讯微信+钞能力双轮驱动、阿里回归AI+交易路线，中国大厂找回自己的AI基因。",
+    "account": "AI科技大本营",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "微软砸25亿组建6000人Frontier Company：AI商业化进入'驻场'时代",
+    "link": "https://www.163.com/dy/article/L11UL0O705568W0A.html",
+    "published": "2026-07-05",
+    "summary": "微软、AWS、OpenAI、Anthropic四大巨头合计砸近90亿美元，AI竞争从'谁模型更强'转向'谁能让AI落地'。",
+    "account": "AI科技大本营",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "AI季报26Q2：从Coding到RSI，强者愈强的未来？",
+    "link": "https://news.qq.com/rain/a/20260706A058S600",
+    "published": "2026-07-06",
+    "summary": "Q2核心趋势：OpenAI Codex反扑Claude Code；RSI递归自进化成为最热方向；更多企业自建/微调模型。",
+    "account": "AI科技大本营",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "反内卷时代下的周期投资",
+    "link": "https://news.qq.com/omn/author/8QMc3ntc5YQZvj0%3D",
+    "published": "2026-07-06",
+    "summary": "远川研究所最新分析：在当前反内卷政策背景下，周期投资的逻辑正在发生深刻变化。",
+    "account": "远川研究所",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "阿里终于想通了",
+    "link": "https://news.qq.com/omn/author/8QMc3ntc5YQZvj0%3D",
+    "published": "2026-07-06",
+    "summary": "远川研究所深度分析阿里最新的战略调整：从什么都想做，到终于聚焦核心业务。",
+    "account": "远川研究所",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "Claude Code 80%提示词说删就删：AI行业'降本'才刚刚开始",
+    "link": "https://www.36kr.com/p/3879682654121990",
+    "published": "2026-07-03",
+    "summary": "Anthropic将Claude Code的system prompt删减80%，从65000 token大幅压缩，企业开始严控AI使用成本。",
+    "account": "AI前线",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "企业AI：方法论易得，交付力难求",
+    "link": "https://www.53ai.com/news/zhinenghuagaizao/2026070613092.html",
+    "published": "2026-07-06",
+    "summary": "2026年全球AI总支出预计达2.6万亿美元，但从PoC到生产落地的Production Gap仍是最大挑战。",
+    "account": "AI前线",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "国内AI编程助手选型深度方案",
+    "link": "https://xie.infoq.cn/article/20385409144a256a3401e566f",
+    "published": "2026-07-03",
+    "summary": "六维评估模型横评国内AI编程助手：Trae、Comate、CodeBuddy等，含完整实施路线图和ROI分析。",
+    "account": "AI前线",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "世界模型不如VLA？穆尧团队和百度智能云给出最新解法",
+    "link": "https://finance.sina.com.cn/wm/2026-07-06/doc-inifvzha8660793.shtml",
+    "published": "2026-07-06",
+    "summary": "上交大&百度发布AHA-WAM异步世界动作模型，推理延迟压至17.56ms，50个任务成功率92.8%。",
+    "account": "AI前线",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "2026年量子计算迎来爆发：融资翻倍、IPO冲刺、市值破百亿",
+    "link": "https://36kr.com/p/3883513899380744",
+    "published": "2026-07-06",
+    "summary": "Q1国内量子赛道融资32亿元超去年全年，Quantinuum登陆纳斯达克市值超150亿美元，本源量子完成近30亿Pre-IPO。",
+    "account": "量子位",
+    "read_count": 0,
+    "read_count_str": "-"
+  },
+  {
+    "title": "WAIC 2026世界模型激辩：答案不在VLA或世界模型，而在？",
+    "link": "https://www.jiqizhixin.com/articles/2026-07-06-13",
+    "published": "2026-07-06",
+    "summary": "WAIC 2026论坛上关于世界模型与VLA路线的激烈辩论，探讨具身智能的技术路径选择。",
+    "account": "机器之心",
+    "read_count": 0,
+    "read_count_str": "-"
+  }
+]
