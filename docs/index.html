@@ -6,449 +6,419 @@
 <title>AI 日报 - 2026年07月07日</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#f5f5f7;--card-bg:#fff;--text:#1d1d1f;--text-secondary:#86868b;--text-tertiary:#aeaeb2;--accent:#0071e3;--accent-bg:#e8f0fe;--border:#e5e5e5;--shadow:0 1px 3px rgba(0,0,0,0.04);--shadow-hover:0 4px 12px rgba(0,0,0,0.08)}
-@media(prefers-color-scheme:dark){:root{--bg:#1c1c1e;--card-bg:#2c2c2e;--text:#f5f5f7;--text-secondary:#98989d;--text-tertiary:#636366;--accent:#4da6ff;--accent-bg:#1a3a5c;--border:#38383a;--shadow:0 1px 3px rgba(0,0,0,0.2);--shadow-hover:0 4px 12px rgba(0,0,0,0.3)}}
+:root{--bg:#f5f5f7;--card-bg:#fff;--text:#1d1d1f;--text-secondary:#86868b;--text-tertiary:#aeaeb2;--accent:#0071e3;--accent-bg:#e8f0fe;--hot:#ff6b35;--hot-bg:#fff3ee;--border:#e5e5e5;--shadow:0 1px 3px rgba(0,0,0,0.04);--shadow-hover:0 4px 12px rgba(0,0,0,0.08)}
+@media(prefers-color-scheme:dark){:root{--bg:#1c1c1e;--card-bg:#2c2c2e;--text:#f5f5f7;--text-secondary:#98989d;--text-tertiary:#636366;--accent:#4da6ff;--accent-bg:#1a3a5c;--hot:#ff8c5a;--hot-bg:#3a2018;--border:#38383a;--shadow:0 1px 3px rgba(0,0,0,0.2);--shadow-hover:0 4px 12px rgba(0,0,0,0.3)}}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
-.header{background:var(--card-bg);padding:40px 24px 28px;text-align:center;border-bottom:1px solid var(--border)}
+.header{background:var(--card-bg);padding:36px 24px 24px;text-align:center;border-bottom:1px solid var(--border)}
 .header h1{font-size:28px;font-weight:700;margin-bottom:6px}
-.header .subtitle{color:var(--text-secondary);font-size:14px}
-.stats{display:flex;justify-content:center;gap:24px;margin-top:16px;flex-wrap:wrap;font-size:13px;color:var(--text-secondary)}
-.container{max-width:860px;margin:0 auto;padding:28px 20px 48px}
-.card{background:var(--card-bg);border-radius:12px;padding:20px 24px;margin-bottom:10px;box-shadow:var(--shadow);transition:box-shadow 0.2s}
+.subtitle{color:var(--text-secondary);font-size:14px}
+.stats{display:flex;justify-content:center;gap:24px;margin-top:14px;font-size:13px;color:var(--text-secondary);flex-wrap:wrap}
+.container{max-width:900px;margin:0 auto;padding:24px 20px 48px}
+.section-title{font-size:18px;font-weight:700;margin-bottom:16px}
+
+/* Source Dashboard */
+.dashboard{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:32px}
+.source-card{background:var(--card-bg);border-radius:10px;padding:16px;text-align:center;box-shadow:var(--shadow);cursor:pointer;transition:all 0.2s}
+.source-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-1px)}
+.source-card.active{border:2px solid var(--accent)}
+.source-card h3{font-size:13px;font-weight:600;margin-bottom:6px;color:var(--accent)}
+.sc-count{font-size:20px;font-weight:700;display:block}
+.sc-reads{font-size:12px;color:var(--hot);margin-top:4px;display:block}
+
+/* Cards */
+.card{background:var(--card-bg);border-radius:12px;padding:18px 22px;margin-bottom:10px;box-shadow:var(--shadow);transition:box-shadow 0.2s}
 .card:hover{box-shadow:var(--shadow-hover)}
-.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.source-tag{font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-bg);padding:3px 10px;border-radius:4px}
-.read-badge{font-size:12px;color:var(--text-tertiary)}
-.card-title{font-size:17px;font-weight:600;margin-bottom:10px;line-height:1.45}
+.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.source-tag{font-size:11px;font-weight:600;color:var(--accent);background:var(--accent-bg);padding:2px 8px;border-radius:4px}
+.read-badge{font-size:12px;font-weight:600;color:var(--hot);background:var(--hot-bg);padding:2px 8px;border-radius:4px}
+.read-badge.empty{color:var(--text-tertiary);background:transparent}
+.card-title{font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.45}
 .card-title a{color:var(--text);text-decoration:none}
 .card-title a:hover{color:var(--accent)}
-.card-summary{font-size:14px;color:var(--text-secondary);margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.card-bottom{font-size:12px;color:var(--text-tertiary)}
-.footer{text-align:center;padding:36px 20px 48px;color:var(--text-tertiary);font-size:13px;line-height:1.8}
+.card-summary{font-size:13px;color:var(--text-secondary);margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card-time{font-size:12px;color:var(--text-tertiary)}
+
+/* Top 10 Hero */
+.hero-card{display:flex;align-items:flex-start;gap:14px;margin-bottom:10px}
+.hero-card .rank-badge{font-size:20px;font-weight:800;color:var(--accent);min-width:34px;text-align:center;line-height:1.2}
+.hero-card .card-content{flex:1}
+
+/* Expand */
+.expand-bar{text-align:center;margin:20px 0}
+.expand-btn{padding:10px 32px;border-radius:20px;border:1px solid var(--border);background:var(--card-bg);color:var(--accent);font-size:14px;font-weight:500;cursor:pointer;transition:all 0.2s}
+.expand-btn:hover{background:var(--accent-bg)}
+
+/* Filter */
+.filter-bar{display:flex;justify-content:center;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.filter-btn{padding:5px 14px;border-radius:16px;border:1px solid var(--border);background:var(--card-bg);color:var(--text-secondary);font-size:12px;cursor:pointer;transition:all 0.2s}
+.filter-btn.active,.filter-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.hidden{display:none!important}
+#full-feed{display:none}
+
+.footer{text-align:center;padding:28px 20px 40px;color:var(--text-tertiary);font-size:13px;line-height:1.8}
 .footer a{color:var(--accent);text-decoration:none}
-@media(max-width:640px){.header{padding:24px 16px 20px}.header h1{font-size:22px}.container{padding:20px 12px 36px}.card{padding:16px;border-radius:10px}.card-title{font-size:15px}}
+@media(max-width:640px){.dashboard{grid-template-columns:repeat(2,1fr)}.header{padding:24px 16px}.header h1{font-size:22px}.container{padding:16px 12px 32px}.card{padding:14px 16px}.hero-card{flex-direction:column;gap:4px}}
 </style>
 </head>
 <body>
+
 <header class="header">
 <h1>🤖 AI 日报</h1>
-<p class="subtitle">2026年07月07日 · 更新于 11:33 CST</p>
+<p class="subtitle">2026年07月07日 · 更新于 12:40 CST</p>
 <div class="stats">
-<span>📄 37 篇文章</span>
-<span>📡 8 个来源</span>
+<span>📄 7 篇文章</span>
+<span>📡 3 个来源</span>
 </div>
 </header>
+
 <div class="container">
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">新智元</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2651234567&idx=1" target="_blank" rel="noopener">Fable 5级AI预计2年后可在笔记本本地运行</a>
-            </h2>
-            <p class="card-summary">r/LocalLLaMA社区预测前沿模型从云端到本地桌面平均滞后约24.8个月，预计2028年7月Fable 5级AI可在高端笔记本本地运行，标志AI从云垄断走向桌面民主化。</p>
-            <div class="card-bottom"><time>2026-07-07</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">远川研究所</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://news.qq.com/omn/author/8QMc3ntc5YQZvj0%3D" target="_blank" rel="noopener">阿里终于想通了</a>
-            </h2>
-            <p class="card-summary">远川研究所深度分析阿里战略转向，探讨阿里在AI时代的定位调整与业务重塑。</p>
-            <div class="card-bottom"><time>2026-07-07</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">远川研究所</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://news.qq.com/omn/author/8QMc3ntc5YQZvj0%3D" target="_blank" rel="noopener">反内卷时代下的周期投资</a>
-            </h2>
-            <p class="card-summary">远川研究所最新分析：在当前反内卷政策背景下，周期投资的逻辑正在发生深刻变化。</p>
-            <div class="card-bottom"><time>2026-07-07</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">机器之心</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.jiqizhixin.com/articles/2026-07-06-10" target="_blank" rel="noopener">ICML 2026获奖论文揭晓：黄高团队获杰出论文，A3C算法获时间检验奖</a>
-            </h2>
-            <p class="card-summary">ICML 2026共10篇获奖论文揭晓，清华黄高团队获杰出论文奖，DeepMind的A3C算法获十年时间检验奖。会议于7月6日至11日在韩国首尔举行。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">机器之心</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.jiqizhixin.com/articles/2026-07-06-2" target="_blank" rel="noopener">谁说3DGS必须靠LiDAR？如视Argus入选ECCV，让图像也能提供LiDAR级位姿约束</a>
-            </h2>
-            <p class="card-summary">Realsee团队提出Argus系统，从全景图像直接预测相机位姿和度量深度，位姿误差接近LiDAR级别（ATE降至0.096），入选ECCV 2026。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">机器之心</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.jiqizhixin.com/articles/2026-07-06-17" target="_blank" rel="noopener">WAIC 2026科学智能：AI4S从'辅助计算'到'自主发现'，中国如何重塑全球科研版图？</a>
-            </h2>
-            <p class="card-summary">WAIC 2026科学智能论坛探讨AI for Science从辅助工具到自主科学发现范式的转变，中国在AI4S领域加速布局。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">量子位</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://finance.sina.cn/stock/jdts/2026-07-06/detail-inifwfpv8679032.d.html" target="_blank" rel="noopener">模型不是企业的护城河，那什么才是？</a>
-            </h2>
-            <p class="card-summary">衔远科技周伯文教授提出'泛化基础上的深度专业化'才是企业竞争力本质，并发布EnterpriseClawBench企业Agent评测基准，论文登Hugging Face Daily Papers第二。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">量子位</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.qbitai.com/2026/07/444721.html" target="_blank" rel="noopener">极简方案刷新扩散模型推理纪录，阿里清华论文入选ICML杰出论文</a>
-            </h2>
-            <p class="card-summary">阿里与清华合作论文《The Flexibility Trap》入选ICML 2026杰出论文（获奖率仅千分之一），提出JustGRPO方法质疑扩散语言模型中'任意顺序生成'的价值。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">量子位</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://36kr.com/p/3883513899380744" target="_blank" rel="noopener">2026年量子计算迎来爆发：融资翻倍、IPO冲刺、市值破百亿</a>
-            </h2>
-            <p class="card-summary">Q1国内量子赛道融资32亿元超去年全年，Quantinuum登陆纳斯达克市值超150亿美元，本源量子完成近30亿Pre-IPO。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">新智元</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2651234560&idx=1" target="_blank" rel="noopener">世界模型底层密码「因果AI」——零犀科技潜伏6年</a>
-            </h2>
-            <p class="card-summary">李飞飞World Labs、LeCun AMI Labs引爆世界模型赛道，北京零犀科技自2020年深耕因果AI，2024年完成'因果AI与大模型融合'核心专利。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">Datawhale</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://zhuanlan.zhihu.com/p/2057599976465766285" target="_blank" rel="noopener">7月11日杭州见，首个OPC能力全国总决赛来了！</a>
-            </h2>
-            <p class="card-summary">Datawhale联合商汤小浣熊主办的国内首个OPC（一人AI全栈）能力挑战赛总决赛将于7月11日在杭州举行，总报名近2万人，决赛20强团队路演。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">Datawhale</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://news.qq.com/rain/a/20260706V09FR400" target="_blank" rel="noopener">《商学院》对话Datawhale生态负责人：商业化是发展后自然而然的结果</a>
-            </h2>
-            <p class="card-summary">《商学院》杂志专访Datawhale生态负责人司玉鑫，探讨社区商业化路径。同期发布对话运营总监甘元琦内容：'AI时代，如何培养能交付价值的人'。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">AI科技大本营</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.36kr.com/p/3883985820446978" target="_blank" rel="noopener">大厂AI转入「基因驱动」：字节大力出奇迹，腾讯微信+钞能力，阿里回归交易</a>
-            </h2>
-            <p class="card-summary">字节、阿里、腾讯三大巨头集体转向'基因驱动'——字节重拾'大力出奇迹'，腾讯回归'左手微信+右手钞能力'，阿里大踏步'回归交易'，与硅谷走上截然不同路径。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">AI科技大本营</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.163.com/dy/article/L16CPRTJ05119734.html" target="_blank" rel="noopener">AI产业正在围着OpenAI和Anthropic两家公司打转</a>
-            </h2>
-            <p class="card-summary">深度分析AI产业链重组：前沿模型训练集中在两三家巨头，算力供应商纷纷转型，自研芯片潮兴起，英伟达AI加速器市场份额预计从86%降至75%。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">AI科技大本营</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://news.qq.com/rain/a/20260706A058S600" target="_blank" rel="noopener">AI季报26Q2：从Coding到RSI，强者愈强的未来？</a>
-            </h2>
-            <p class="card-summary">Q2核心趋势：OpenAI Codex反扑Claude Code；RSI递归自进化成为最热方向；更多企业客户想要自己的模型，AI行业强者愈强格局进一步强化。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">AI前线</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.53ai.com/news/zhinenghuagaizao/2026070613092.html" target="_blank" rel="noopener">企业AI：方法论易得，交付力难求</a>
-            </h2>
-            <p class="card-summary">全球AI总支出2026年预计达2.6万亿美元（同比增47%），多数企业卡在PoC到生产之间的鸿沟。阿里云发布'睿系列'RaaS产品。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">AI前线</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.iansresearch.com/resources/all-blogs/post/security-blog/2026/07/06/vulnerability-finding-ai-races-toward-commodity-status" target="_blank" rel="noopener">漏洞发现AI成为地缘政治角力焦点：美国Mythos vs 中国GLM-5.2</a>
-            </h2>
-            <p class="card-summary">美国GPT-5.6、Anthropic Mythos vs 中国GLM-5.2（智谱，MIT开源）、360倚天屠龙项目——AI驱动的漏洞发现能力正快速商品化，成为地缘政治角力新焦点。</p>
-            <div class="card-bottom"><time>2026-07-06</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">机器之心</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.jiqizhixin.com/articles/2026-07-05-10" target="_blank" rel="noopener">ACL 2026｜块越大推理越差？扩散语言模型新难题被T*破解了</a>
-            </h2>
-            <p class="card-summary">上海科学智能研究院提出T*方法，解决扩散语言模型在增大块尺寸时推理能力衰减的问题，4B模型MATH500准确率从60.73提升至76.00。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">机器之心</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.jiqizhixin.com/articles/2026-07-05-12" target="_blank" rel="noopener">清华特奖获得者顾煜贤，加入DeepSeek</a>
-            </h2>
-            <p class="card-summary">清华2021级博士生顾煜贤（曾获苹果博士奖学金）正式加入DeepSeek，研究方向涵盖预训练数据筛选、知识蒸馏、高效模型架构。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">机器之心</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.jiqizhixin.com/articles/2026-07-05-14" target="_blank" rel="noopener">Claude工程师终于交出Fable 5焚诀！教你打破和模型之间的信息差</a>
-            </h2>
-            <p class="card-summary">Claude Code工程师Thariq Shihipar发布长文，详解如何打破用户与模型之间的'信息差'，将未知拆解为四类：已知已知、已知未知、未知已知、未知未知。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">机器之心</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.jiqizhixin.com/articles/2026-07-05-3" target="_blank" rel="noopener">上海交大提出ICRDrag：首个上下文区域拖拽模型，实现精准可控图像编辑</a>
-            </h2>
-            <p class="card-summary">上海交大提出ICRDrag，入选ECCV 2026，用掩码精准定位区域实现图像拖拽编辑，支持最多5对源-目标区域同时编辑。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">机器之心</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.jiqizhixin.com/articles/2026-07-05-7" target="_blank" rel="noopener">Arm CEO：CPU需求已「爆表」！Agent时代每GW数据中心需1.2亿核心</a>
-            </h2>
-            <p class="card-summary">Arm CEO Rene Haas专访指出，Agent时代每GW数据中心需1.2亿CPU核心，CPU需求正以前所未有的速度增长。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">量子位</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.qbitai.com/2026/07/443981.html" target="_blank" rel="noopener">Meta模型搞不出起色，小扎盯上基础设施——打算卖GPU了</a>
-            </h2>
-            <p class="card-summary">Meta因Gemini被限用、AI agent推进慢、员工士气低迷，考虑推出Meta Compute开放算力给外部客户，2026年资本开支上调至1250亿-1450亿美元。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">量子位</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.qbitai.com/2026/07/444568.html" target="_blank" rel="noopener">华为韬定律论文更新：首次正面回应3D芯片散热工程问题</a>
-            </h2>
-            <p class="card-summary">华为更新韬定律（τ Scaling）论文，增加大量工程细节、实测数据和产品规划，首次正面回应3D芯片散热的工程问题，并公开与友商基线对比数据。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">新智元</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://link.baai.ac.cn/@AI_era/116870834311489284" target="_blank" rel="noopener">Arena估值冲上17亿美元：不造AI只靠'卖水'，8个月年入1亿</a>
-            </h2>
-            <p class="card-summary">伯克利Chatbot Arena商业化8个月，年化营收达1亿美元，估值冲破17亿，成为AI评测领域'卖水人'神话。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">极客公园</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.geekpark.net/news/358012" target="_blank" rel="noopener">赛博菩萨Cloudflare，AI爬虫最严厉的父亲</a>
-            </h2>
-            <p class="card-summary">Cloudflare宣布从9月15日起默认屏蔽混合用途AI爬虫，将爬虫分三类（Search/Agent/Training），并推出Pay Per Use模式让内容创作者按使用量从AI公司获得报酬。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">极客公园</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.geekpark.net/news/358020" target="_blank" rel="noopener">6月最「有活儿」的AI硬件：手摇发电的实体GPT、会织毛绒的打印机</a>
-            </h2>
-            <p class="card-summary">极客公园'造物100'栏目盘点10款有趣AI硬件：手摇发电CrankGPT、会织毛绒的打印机Craftphilia、Claude官方桌宠Buddy、全地形跟拍摄影机器人Beni等。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">远川研究所</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.toutiao.com/c/user/token/CiwTqW7sU3KUcYH7llXP8nmLp758pEXUKGpDgEplF0iFD43Hz_4KhcZy4TWWgxpJCjw/" target="_blank" rel="noopener">玻璃基板突然加速</a>
-            </h2>
-            <p class="card-summary">远川研究所分析半导体封装材料变革：玻璃基板技术突然加速推进，可能重塑芯片封装产业格局。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">AI科技大本营</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://stcn.com/article/detail/3998599.html" target="_blank" rel="noopener">美AI投资进入「清醒时间」：七巨头上半年跑输大盘，卖铲人成最大赢家</a>
-            </h2>
-            <p class="card-summary">美股七巨头上半年整体跑输大盘，市场从'增长叙事'转向'盈利验证'。存储芯片、先进封装等'卖铲人'企业成最大赢家，Meta出售闲置算力信号引发AI泡沫担忧。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">AI科技大本营</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.cnr.cn/bj/jcsy/20260705/t20260705_527692149.shtml" target="_blank" rel="noopener">AI正从「思考」迈向「行动」与「交付」，周鸿祎判断5至10年内完成重构</a>
-            </h2>
-            <p class="card-summary">2026全球数字经济大会上，周鸿祎判断'AI对世界的重构将在5至10年内完成'，2026年已进入'智能体元年'。北京AI核心产业规模达4500亿元。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">AI前线</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.163.com/dy/article/L11UL0O705568W0A.html" target="_blank" rel="noopener">微软砸25亿部署企业AI模式，成立Frontier Company帮客户从PoC到生产落地</a>
-            </h2>
-            <p class="card-summary">微软投入25亿美元整合约6000名工程师成立Frontier Company，帮企业客户把AI从PoC推进到生产落地，承诺'模型无关'和'数据主权'。</p>
-            <div class="card-bottom"><time>2026-07-05</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">新智元</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.36kr.com/p/3881112560005381" target="_blank" rel="noopener">Anthropic拟全面封禁地下通道，阿里内部已宣布反向禁用Claude全系产品</a>
-            </h2>
-            <p class="card-summary">Anthropic实施史上最严封禁政策：禁止未支持地区访问Claude、封禁API中转站、检测操作系统时区。阿里内部宣布反向禁用Claude全系产品，7月10日生效。</p>
-            <div class="card-bottom"><time>2026-07-04</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">新智元</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2651234555&idx=1" target="_blank" rel="noopener">Token单价跌破1美元，总账单反在爆炸——AI经济学最反直觉的一幕</a>
-            </h2>
-            <p class="card-summary">SemiAnalysis真实成本每百万Token仅0.99美元，但内部Token支出已达员工薪资30%。Uber推广Claude Code后全年预算已花完，紧急设每人每月1500美元上限。</p>
-            <div class="card-bottom"><time>2026-07-04</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">极客公园</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.geekpark.net/news/358001" target="_blank" rel="noopener">比AirPods贵三倍的「睡眠耳机」，可能是最有用的AI硬件</a>
-            </h2>
-            <p class="card-summary">SOND公司推出AI睡眠耳机Dreambuds（定价499美元），配备AI睡眠教练，内置心冲击图等12路生理信号监测，通过声音干预和呼吸引导帮助用户入睡。</p>
-            <div class="card-bottom"><time>2026-07-04</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">AI前线</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://36kr.com/p/3880071979694726" target="_blank" rel="noopener">微软、字节、福特都在高薪招人，AI前线部署工程师（FDE）成最热岗位</a>
-            </h2>
-            <p class="card-summary">字节跳动为FDE开月薪3.5~7万（15薪，最高年薪105万），阿里云FDE月薪2~5万（16薪）。全球FDE招聘岗位2023-2025年增长42倍。</p>
-            <div class="card-bottom"><time>2026-07-04</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">远川研究所</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://www.toutiao.com/c/user/token/CiwTqW7sU3KUcYH7llXP8nmLp758pEXUKGpDgEplF0iFD43Hz_4KhcZy4TWWgxpJCjw/" target="_blank" rel="noopener">绕不开的中国稀土</a>
-            </h2>
-            <p class="card-summary">远川研究所深度分析中国在全球稀土供应链中的关键地位，以及稀土在AI芯片、新能源等领域的重要性。</p>
-            <div class="card-bottom"><time>2026-07-03</time></div>
-        </article>
-        <article class="card">
-            <div class="card-top">
-                <span class="source-tag">AI前线</span>
-                <span class="read-badge empty">-</span>
-            </div>
-            <h2 class="card-title">
-                <a href="https://stcn.com/article/detail/3994978.html" target="_blank" rel="noopener">白宫加速制定AI模型发布标准，新规或要求发布前先向审查机构开放</a>
-            </h2>
-            <p class="card-summary">美国与OpenAI、Anthropic、谷歌等磋商，拟建'前沿模型'统一安全评估标准，新规或要求模型公开发布前先向特定审查机构开放访问。</p>
-            <div class="card-bottom"><time>2026-07-02</time></div>
-        </article></div>
+
+<!-- Source Dashboard -->
+<div class="dashboard" id="dashboard">
+
+<div class="source-card" data-source="新智元" onclick="filterSource('新智元')">
+<h3>新智元</h3>
+<span class="sc-count">3 篇</span>
+
+</div>
+
+<div class="source-card" data-source="极客公园" onclick="filterSource('极客公园')">
+<h3>极客公园</h3>
+<span class="sc-count">3 篇</span>
+
+</div>
+
+<div class="source-card" data-source="Datawhale" onclick="filterSource('Datawhale')">
+<h3>Datawhale</h3>
+<span class="sc-count">1 篇</span>
+
+</div>
+
+</div>
+
+<!-- Top 10 -->
+<div class="section-title">🔥 今日精选</div>
+
+<article class="card hero-card">
+<span class="rank-badge">#1</span>
+<div class="card-content">
+<div class="card-top">
+<span class="source-tag">新智元</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=1&sn=f5fac6e598e30f5eaede9cf13c8912a5" target="_blank" rel="noopener">李飞飞LeCun疯狂加注！这匹中国黑马，已在因果AI暗战6年</a>
+</h2>
+
+<time class="card-time">2026-07-06</time>
+</div>
+</article>
+
+<article class="card hero-card">
+<span class="rank-badge">#2</span>
+<div class="card-content">
+<div class="card-top">
+<span class="source-tag">新智元</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=2&sn=c3f86d5d51f5a2046cbd992def846edb" target="_blank" rel="noopener">谷歌大佬盛赞Fable 5！23年前PC神作，40分钟塞进iPhone</a>
+</h2>
+
+<time class="card-time">2026-07-06</time>
+</div>
+</article>
+
+<article class="card hero-card">
+<span class="rank-badge">#3</span>
+<div class="card-content">
+<div class="card-top">
+<span class="source-tag">新智元</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=3&sn=0f0b4560c711e9ffefe372e390982b9b" target="_blank" rel="noopener">机器人看视频学操作！伯克利首次打通互联网视频到灵巧手真机部署链路</a>
+</h2>
+
+<time class="card-time">2026-07-06</time>
+</div>
+</article>
+
+<article class="card hero-card">
+<span class="rank-badge">#4</span>
+<div class="card-content">
+<div class="card-top">
+<span class="source-tag">极客公园</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109911&idx=1&sn=61d1a85869078c6912927ec6a220a71d" target="_blank" rel="noopener">治理与进化，如何成为企业级 Agent 的两条生死线？</a>
+</h2>
+
+<p class="card-summary">如何让 Agent 低成本、低风险地在企业级场景运行。</p>
+
+<time class="card-time">2026-07-06</time>
+</div>
+</article>
+
+<article class="card hero-card">
+<span class="rank-badge">#5</span>
+<div class="card-content">
+<div class="card-top">
+<span class="source-tag">极客公园</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109899&idx=1&sn=ca3e07d6f1cd0b0509da332ffe1c220f" target="_blank" rel="noopener">AI，正在替你「养」孩子</a>
+</h2>
+
+<p class="card-summary">「人工抚养」，未来可能成为一种特权？</p>
+
+<time class="card-time">2026-07-06</time>
+</div>
+</article>
+
+<article class="card hero-card">
+<span class="rank-badge">#6</span>
+<div class="card-content">
+<div class="card-top">
+<span class="source-tag">极客公园</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109893&idx=1&sn=a0e317a24f0699954b52ac211e56f4f3" target="_blank" rel="noopener">新能源乘用车平均车龄 1.8 年；iPhone 入选美国时间胶囊；Meta 推全新 AI 社交应用 | 极客早知道</a>
+</h2>
+
+<p class="card-summary">黑石集团终止美国弗吉尼亚州「数据门户」项目;消息称 Anthropic 拟在澳大利亚布局 1.4GW 数据中心算力，建设成本达 150 亿美元;春水堂伴侣机器人发布：1.5 万元起售</p>
+
+<time class="card-time">2026-07-06</time>
+</div>
+</article>
+
+<article class="card hero-card">
+<span class="rank-badge">#7</span>
+<div class="card-content">
+<div class="card-top">
+<span class="source-tag">Datawhale</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247724029&idx=1&sn=db001bc22850a7d9fd8c5fb6aff5932c" target="_blank" rel="noopener">7月11日杭州见，首个OPC能力全国总决赛来了！</a>
+</h2>
+
+<time class="card-time">2026-07-06</time>
+</div>
+</article>
+
+
+<!-- Expand -->
+<div class="expand-bar">
+<button class="expand-btn" onclick="toggleFullFeed()" id="expand-btn">查看全部 7 篇文章 ▼</button>
+</div>
+
+<!-- Full Feed (hidden) -->
+<div id="full-feed">
+<div class="filter-bar">
+<button class="filter-btn active" data-filter="all" onclick="filterSource('all')">全部</button>
+
+<button class="filter-btn" data-filter="新智元" onclick="filterSource('新智元')">新智元</button>
+
+<button class="filter-btn" data-filter="极客公园" onclick="filterSource('极客公园')">极客公园</button>
+
+<button class="filter-btn" data-filter="Datawhale" onclick="filterSource('Datawhale')">Datawhale</button>
+
+</div>
+<div class="filter-bar" style="margin-bottom:16px">
+<button class="filter-btn" onclick="sortFeed('heat')">🔥 按热度</button>
+<button class="filter-btn" onclick="sortFeed('time')">🕐 按时间</button>
+</div>
+
+
+<article class="card feed-card"
+         data-source="新智元"
+         data-read="0"
+         data-time="2026-07-06">
+<div class="card-top">
+<span class="source-tag">新智元</span>
+
+<span class="read-badge empty">—</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=1&sn=f5fac6e598e30f5eaede9cf13c8912a5" target="_blank" rel="noopener">李飞飞LeCun疯狂加注！这匹中国黑马，已在因果AI暗战6年</a>
+</h2>
+
+<time class="card-time">2026-07-06</time>
+</article>
+
+<article class="card feed-card"
+         data-source="新智元"
+         data-read="0"
+         data-time="2026-07-06">
+<div class="card-top">
+<span class="source-tag">新智元</span>
+
+<span class="read-badge empty">—</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=2&sn=c3f86d5d51f5a2046cbd992def846edb" target="_blank" rel="noopener">谷歌大佬盛赞Fable 5！23年前PC神作，40分钟塞进iPhone</a>
+</h2>
+
+<time class="card-time">2026-07-06</time>
+</article>
+
+<article class="card feed-card"
+         data-source="新智元"
+         data-read="0"
+         data-time="2026-07-06">
+<div class="card-top">
+<span class="source-tag">新智元</span>
+
+<span class="read-badge empty">—</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=3&sn=0f0b4560c711e9ffefe372e390982b9b" target="_blank" rel="noopener">机器人看视频学操作！伯克利首次打通互联网视频到灵巧手真机部署链路</a>
+</h2>
+
+<time class="card-time">2026-07-06</time>
+</article>
+
+<article class="card feed-card"
+         data-source="极客公园"
+         data-read="0"
+         data-time="2026-07-06">
+<div class="card-top">
+<span class="source-tag">极客公园</span>
+
+<span class="read-badge empty">—</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109911&idx=1&sn=61d1a85869078c6912927ec6a220a71d" target="_blank" rel="noopener">治理与进化，如何成为企业级 Agent 的两条生死线？</a>
+</h2>
+
+<p class="card-summary">如何让 Agent 低成本、低风险地在企业级场景运行。</p>
+
+<time class="card-time">2026-07-06</time>
+</article>
+
+<article class="card feed-card"
+         data-source="极客公园"
+         data-read="0"
+         data-time="2026-07-06">
+<div class="card-top">
+<span class="source-tag">极客公园</span>
+
+<span class="read-badge empty">—</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109899&idx=1&sn=ca3e07d6f1cd0b0509da332ffe1c220f" target="_blank" rel="noopener">AI，正在替你「养」孩子</a>
+</h2>
+
+<p class="card-summary">「人工抚养」，未来可能成为一种特权？</p>
+
+<time class="card-time">2026-07-06</time>
+</article>
+
+<article class="card feed-card"
+         data-source="极客公园"
+         data-read="0"
+         data-time="2026-07-06">
+<div class="card-top">
+<span class="source-tag">极客公园</span>
+
+<span class="read-badge empty">—</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109893&idx=1&sn=a0e317a24f0699954b52ac211e56f4f3" target="_blank" rel="noopener">新能源乘用车平均车龄 1.8 年；iPhone 入选美国时间胶囊；Meta 推全新 AI 社交应用 | 极客早知道</a>
+</h2>
+
+<p class="card-summary">黑石集团终止美国弗吉尼亚州「数据门户」项目;消息称 Anthropic 拟在澳大利亚布局 1.4GW 数据中心算力，建设成本达 150 亿美元;春水堂伴侣机器人发布：1.5 万元起售</p>
+
+<time class="card-time">2026-07-06</time>
+</article>
+
+<article class="card feed-card"
+         data-source="Datawhale"
+         data-read="0"
+         data-time="2026-07-06">
+<div class="card-top">
+<span class="source-tag">Datawhale</span>
+
+<span class="read-badge empty">—</span>
+
+</div>
+<h2 class="card-title">
+<a href="https://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247724029&idx=1&sn=db001bc22850a7d9fd8c5fb6aff5932c" target="_blank" rel="noopener">7月11日杭州见，首个OPC能力全国总决赛来了！</a>
+</h2>
+
+<time class="card-time">2026-07-06</time>
+</article>
+
+</div>
+
+</div>
+
 <footer class="footer">
-<p>数据来源：微信公众号 · 每日 19:00 自动更新</p>
-<p><a href="https://github.com/Sloane-tree/ai-daily" target="_blank">GitHub</a></p>
+<p>数据来源：微信公众号 · 通过 <a href="https://wechat2rss.xlab.app" target="_blank">Wechat2RSS</a> 抓取</p>
+<p>每日更新 · <a href="https://github.com/Sloane-tree/ai-daily" target="_blank">GitHub</a></p>
 </footer>
+
+<script>
+function toggleFullFeed() {
+    var feed = document.getElementById('full-feed');
+    var btn = document.getElementById('expand-btn');
+    if (feed.style.display === 'none' || feed.style.display === '') {
+        feed.style.display = 'block';
+        btn.textContent = '收起 ▲';
+    } else {
+        feed.style.display = 'none';
+        btn.textContent = '查看全部 7 篇文章 ▼';
+    }
+}
+
+function filterSource(source) {
+    var cards = document.querySelectorAll('#full-feed .feed-card');
+    cards.forEach(function(c) {
+        if (source === 'all' || c.getAttribute('data-source') === source) {
+            c.classList.remove('hidden');
+        } else {
+            c.classList.add('hidden');
+        }
+    });
+    // Toggle active state on filter buttons
+    document.querySelectorAll('#full-feed .filter-btn[data-filter]').forEach(function(b) {
+        b.classList.toggle('active', b.getAttribute('data-filter') === source);
+    });
+    // Toggle dashboard cards
+    document.querySelectorAll('#dashboard .source-card').forEach(function(c) {
+        c.classList.toggle('active', c.getAttribute('data-source') === source);
+    });
+}
+
+function sortFeed(mode) {
+    var container = document.getElementById('full-feed');
+    var cards = Array.from(container.querySelectorAll('.feed-card'));
+    cards.sort(function(a, b) {
+        if (mode === 'heat') {
+            var ra = parseInt(a.getAttribute('data-read')) || 0;
+            var rb = parseInt(b.getAttribute('data-read')) || 0;
+            if (ra !== rb) return rb - ra;
+            return (b.getAttribute('data-time') || '').localeCompare(a.getAttribute('data-time') || '');
+        } else {
+            var ta = a.getAttribute('data-time') || '';
+            var tb = b.getAttribute('data-time') || '';
+            if (ta !== tb) return tb.localeCompare(ta);
+            return (parseInt(b.getAttribute('data-read')) || 0) - (parseInt(a.getAttribute('data-read')) || 0);
+        }
+    });
+    cards.forEach(function(c) { container.appendChild(c); });
+}
+</script>
+
 </body>
 </html>

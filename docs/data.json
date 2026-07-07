@@ -1,334 +1,64 @@
 [
   {
-    "title": "ICML 2026获奖论文揭晓：黄高团队获杰出论文，A3C算法获时间检验奖",
-    "link": "https://www.jiqizhixin.com/articles/2026-07-06-10",
+    "title": "李飞飞LeCun疯狂加注！这匹中国黑马，已在因果AI暗战6年",
+    "link": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=1&sn=f5fac6e598e30f5eaede9cf13c8912a5",
     "published": "2026-07-06",
-    "summary": "ICML 2026共10篇获奖论文揭晓，清华黄高团队获杰出论文奖，DeepMind的A3C算法获十年时间检验奖。会议于7月6日至11日在韩国首尔举行。",
-    "account": "机器之心",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "谁说3DGS必须靠LiDAR？如视Argus入选ECCV，让图像也能提供LiDAR级位姿约束",
-    "link": "https://www.jiqizhixin.com/articles/2026-07-06-2",
-    "published": "2026-07-06",
-    "summary": "Realsee团队提出Argus系统，从全景图像直接预测相机位姿和度量深度，位姿误差接近LiDAR级别（ATE降至0.096），入选ECCV 2026。",
-    "account": "机器之心",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "WAIC 2026科学智能：AI4S从'辅助计算'到'自主发现'，中国如何重塑全球科研版图？",
-    "link": "https://www.jiqizhixin.com/articles/2026-07-06-17",
-    "published": "2026-07-06",
-    "summary": "WAIC 2026科学智能论坛探讨AI for Science从辅助工具到自主科学发现范式的转变，中国在AI4S领域加速布局。",
-    "account": "机器之心",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "ACL 2026｜块越大推理越差？扩散语言模型新难题被T*破解了",
-    "link": "https://www.jiqizhixin.com/articles/2026-07-05-10",
-    "published": "2026-07-05",
-    "summary": "上海科学智能研究院提出T*方法，解决扩散语言模型在增大块尺寸时推理能力衰减的问题，4B模型MATH500准确率从60.73提升至76.00。",
-    "account": "机器之心",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "清华特奖获得者顾煜贤，加入DeepSeek",
-    "link": "https://www.jiqizhixin.com/articles/2026-07-05-12",
-    "published": "2026-07-05",
-    "summary": "清华2021级博士生顾煜贤（曾获苹果博士奖学金）正式加入DeepSeek，研究方向涵盖预训练数据筛选、知识蒸馏、高效模型架构。",
-    "account": "机器之心",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "Claude工程师终于交出Fable 5焚诀！教你打破和模型之间的信息差",
-    "link": "https://www.jiqizhixin.com/articles/2026-07-05-14",
-    "published": "2026-07-05",
-    "summary": "Claude Code工程师Thariq Shihipar发布长文，详解如何打破用户与模型之间的'信息差'，将未知拆解为四类：已知已知、已知未知、未知已知、未知未知。",
-    "account": "机器之心",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "上海交大提出ICRDrag：首个上下文区域拖拽模型，实现精准可控图像编辑",
-    "link": "https://www.jiqizhixin.com/articles/2026-07-05-3",
-    "published": "2026-07-05",
-    "summary": "上海交大提出ICRDrag，入选ECCV 2026，用掩码精准定位区域实现图像拖拽编辑，支持最多5对源-目标区域同时编辑。",
-    "account": "机器之心",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "Arm CEO：CPU需求已「爆表」！Agent时代每GW数据中心需1.2亿核心",
-    "link": "https://www.jiqizhixin.com/articles/2026-07-05-7",
-    "published": "2026-07-05",
-    "summary": "Arm CEO Rene Haas专访指出，Agent时代每GW数据中心需1.2亿CPU核心，CPU需求正以前所未有的速度增长。",
-    "account": "机器之心",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "模型不是企业的护城河，那什么才是？",
-    "link": "https://finance.sina.cn/stock/jdts/2026-07-06/detail-inifwfpv8679032.d.html",
-    "published": "2026-07-06",
-    "summary": "衔远科技周伯文教授提出'泛化基础上的深度专业化'才是企业竞争力本质，并发布EnterpriseClawBench企业Agent评测基准，论文登Hugging Face Daily Papers第二。",
-    "account": "量子位",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "极简方案刷新扩散模型推理纪录，阿里清华论文入选ICML杰出论文",
-    "link": "https://www.qbitai.com/2026/07/444721.html",
-    "published": "2026-07-06",
-    "summary": "阿里与清华合作论文《The Flexibility Trap》入选ICML 2026杰出论文（获奖率仅千分之一），提出JustGRPO方法质疑扩散语言模型中'任意顺序生成'的价值。",
-    "account": "量子位",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "Meta模型搞不出起色，小扎盯上基础设施——打算卖GPU了",
-    "link": "https://www.qbitai.com/2026/07/443981.html",
-    "published": "2026-07-05",
-    "summary": "Meta因Gemini被限用、AI agent推进慢、员工士气低迷，考虑推出Meta Compute开放算力给外部客户，2026年资本开支上调至1250亿-1450亿美元。",
-    "account": "量子位",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "华为韬定律论文更新：首次正面回应3D芯片散热工程问题",
-    "link": "https://www.qbitai.com/2026/07/444568.html",
-    "published": "2026-07-05",
-    "summary": "华为更新韬定律（τ Scaling）论文，增加大量工程细节、实测数据和产品规划，首次正面回应3D芯片散热的工程问题，并公开与友商基线对比数据。",
-    "account": "量子位",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "2026年量子计算迎来爆发：融资翻倍、IPO冲刺、市值破百亿",
-    "link": "https://36kr.com/p/3883513899380744",
-    "published": "2026-07-06",
-    "summary": "Q1国内量子赛道融资32亿元超去年全年，Quantinuum登陆纳斯达克市值超150亿美元，本源量子完成近30亿Pre-IPO。",
-    "account": "量子位",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "Arena估值冲上17亿美元：不造AI只靠'卖水'，8个月年入1亿",
-    "link": "https://link.baai.ac.cn/@AI_era/116870834311489284",
-    "published": "2026-07-05",
-    "summary": "伯克利Chatbot Arena商业化8个月，年化营收达1亿美元，估值冲破17亿，成为AI评测领域'卖水人'神话。",
+    "summary": "",
     "account": "新智元",
     "read_count": 0,
     "read_count_str": "-"
   },
   {
-    "title": "Anthropic拟全面封禁地下通道，阿里内部已宣布反向禁用Claude全系产品",
-    "link": "https://www.36kr.com/p/3881112560005381",
-    "published": "2026-07-04",
-    "summary": "Anthropic实施史上最严封禁政策：禁止未支持地区访问Claude、封禁API中转站、检测操作系统时区。阿里内部宣布反向禁用Claude全系产品，7月10日生效。",
-    "account": "新智元",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "Fable 5级AI预计2年后可在笔记本本地运行",
-    "link": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2651234567&idx=1",
-    "published": "2026-07-07",
-    "summary": "r/LocalLLaMA社区预测前沿模型从云端到本地桌面平均滞后约24.8个月，预计2028年7月Fable 5级AI可在高端笔记本本地运行，标志AI从云垄断走向桌面民主化。",
-    "account": "新智元",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "世界模型底层密码「因果AI」——零犀科技潜伏6年",
-    "link": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2651234560&idx=1",
+    "title": "谷歌大佬盛赞Fable 5！23年前PC神作，40分钟塞进iPhone",
+    "link": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=2&sn=c3f86d5d51f5a2046cbd992def846edb",
     "published": "2026-07-06",
-    "summary": "李飞飞World Labs、LeCun AMI Labs引爆世界模型赛道，北京零犀科技自2020年深耕因果AI，2024年完成'因果AI与大模型融合'核心专利。",
+    "summary": "",
     "account": "新智元",
     "read_count": 0,
     "read_count_str": "-"
   },
   {
-    "title": "Token单价跌破1美元，总账单反在爆炸——AI经济学最反直觉的一幕",
-    "link": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2651234555&idx=1",
-    "published": "2026-07-04",
-    "summary": "SemiAnalysis真实成本每百万Token仅0.99美元，但内部Token支出已达员工薪资30%。Uber推广Claude Code后全年预算已花完，紧急设每人每月1500美元上限。",
+    "title": "机器人看视频学操作！伯克利首次打通互联网视频到灵巧手真机部署链路",
+    "link": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=3&sn=0f0b4560c711e9ffefe372e390982b9b",
+    "published": "2026-07-06",
+    "summary": "",
     "account": "新智元",
     "read_count": 0,
     "read_count_str": "-"
   },
   {
-    "title": "赛博菩萨Cloudflare，AI爬虫最严厉的父亲",
-    "link": "https://www.geekpark.net/news/358012",
-    "published": "2026-07-05",
-    "summary": "Cloudflare宣布从9月15日起默认屏蔽混合用途AI爬虫，将爬虫分三类（Search/Agent/Training），并推出Pay Per Use模式让内容创作者按使用量从AI公司获得报酬。",
+    "title": "治理与进化，如何成为企业级 Agent 的两条生死线？",
+    "link": "https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109911&idx=1&sn=61d1a85869078c6912927ec6a220a71d",
+    "published": "2026-07-06",
+    "summary": "如何让 Agent 低成本、低风险地在企业级场景运行。",
     "account": "极客公园",
     "read_count": 0,
     "read_count_str": "-"
   },
   {
-    "title": "比AirPods贵三倍的「睡眠耳机」，可能是最有用的AI硬件",
-    "link": "https://www.geekpark.net/news/358001",
-    "published": "2026-07-04",
-    "summary": "SOND公司推出AI睡眠耳机Dreambuds（定价499美元），配备AI睡眠教练，内置心冲击图等12路生理信号监测，通过声音干预和呼吸引导帮助用户入睡。",
+    "title": "AI，正在替你「养」孩子",
+    "link": "https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109899&idx=1&sn=ca3e07d6f1cd0b0509da332ffe1c220f",
+    "published": "2026-07-06",
+    "summary": "「人工抚养」，未来可能成为一种特权？",
     "account": "极客公园",
     "read_count": 0,
     "read_count_str": "-"
   },
   {
-    "title": "6月最「有活儿」的AI硬件：手摇发电的实体GPT、会织毛绒的打印机",
-    "link": "https://www.geekpark.net/news/358020",
-    "published": "2026-07-05",
-    "summary": "极客公园'造物100'栏目盘点10款有趣AI硬件：手摇发电CrankGPT、会织毛绒的打印机Craftphilia、Claude官方桌宠Buddy、全地形跟拍摄影机器人Beni等。",
+    "title": "新能源乘用车平均车龄 1.8 年；iPhone 入选美国时间胶囊；Meta 推全新 AI 社交应用 | 极客早知道",
+    "link": "https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109893&idx=1&sn=a0e317a24f0699954b52ac211e56f4f3",
+    "published": "2026-07-06",
+    "summary": "黑石集团终止美国弗吉尼亚州「数据门户」项目;消息称 Anthropic 拟在澳大利亚布局 1.4GW 数据中心算力，建设成本达 150 亿美元;春水堂伴侣机器人发布：1.5 万元起售",
     "account": "极客公园",
     "read_count": 0,
     "read_count_str": "-"
   },
   {
     "title": "7月11日杭州见，首个OPC能力全国总决赛来了！",
-    "link": "https://zhuanlan.zhihu.com/p/2057599976465766285",
+    "link": "https://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247724029&idx=1&sn=db001bc22850a7d9fd8c5fb6aff5932c",
     "published": "2026-07-06",
-    "summary": "Datawhale联合商汤小浣熊主办的国内首个OPC（一人AI全栈）能力挑战赛总决赛将于7月11日在杭州举行，总报名近2万人，决赛20强团队路演。",
+    "summary": "",
     "account": "Datawhale",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "《商学院》对话Datawhale生态负责人：商业化是发展后自然而然的结果",
-    "link": "https://news.qq.com/rain/a/20260706V09FR400",
-    "published": "2026-07-06",
-    "summary": "《商学院》杂志专访Datawhale生态负责人司玉鑫，探讨社区商业化路径。同期发布对话运营总监甘元琦内容：'AI时代，如何培养能交付价值的人'。",
-    "account": "Datawhale",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "阿里终于想通了",
-    "link": "https://news.qq.com/omn/author/8QMc3ntc5YQZvj0%3D",
-    "published": "2026-07-07",
-    "summary": "远川研究所深度分析阿里战略转向，探讨阿里在AI时代的定位调整与业务重塑。",
-    "account": "远川研究所",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "玻璃基板突然加速",
-    "link": "https://www.toutiao.com/c/user/token/CiwTqW7sU3KUcYH7llXP8nmLp758pEXUKGpDgEplF0iFD43Hz_4KhcZy4TWWgxpJCjw/",
-    "published": "2026-07-05",
-    "summary": "远川研究所分析半导体封装材料变革：玻璃基板技术突然加速推进，可能重塑芯片封装产业格局。",
-    "account": "远川研究所",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "绕不开的中国稀土",
-    "link": "https://www.toutiao.com/c/user/token/CiwTqW7sU3KUcYH7llXP8nmLp758pEXUKGpDgEplF0iFD43Hz_4KhcZy4TWWgxpJCjw/",
-    "published": "2026-07-03",
-    "summary": "远川研究所深度分析中国在全球稀土供应链中的关键地位，以及稀土在AI芯片、新能源等领域的重要性。",
-    "account": "远川研究所",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "反内卷时代下的周期投资",
-    "link": "https://news.qq.com/omn/author/8QMc3ntc5YQZvj0%3D",
-    "published": "2026-07-07",
-    "summary": "远川研究所最新分析：在当前反内卷政策背景下，周期投资的逻辑正在发生深刻变化。",
-    "account": "远川研究所",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "大厂AI转入「基因驱动」：字节大力出奇迹，腾讯微信+钞能力，阿里回归交易",
-    "link": "https://www.36kr.com/p/3883985820446978",
-    "published": "2026-07-06",
-    "summary": "字节、阿里、腾讯三大巨头集体转向'基因驱动'——字节重拾'大力出奇迹'，腾讯回归'左手微信+右手钞能力'，阿里大踏步'回归交易'，与硅谷走上截然不同路径。",
-    "account": "AI科技大本营",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "美AI投资进入「清醒时间」：七巨头上半年跑输大盘，卖铲人成最大赢家",
-    "link": "https://stcn.com/article/detail/3998599.html",
-    "published": "2026-07-05",
-    "summary": "美股七巨头上半年整体跑输大盘，市场从'增长叙事'转向'盈利验证'。存储芯片、先进封装等'卖铲人'企业成最大赢家，Meta出售闲置算力信号引发AI泡沫担忧。",
-    "account": "AI科技大本营",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "AI正从「思考」迈向「行动」与「交付」，周鸿祎判断5至10年内完成重构",
-    "link": "https://www.cnr.cn/bj/jcsy/20260705/t20260705_527692149.shtml",
-    "published": "2026-07-05",
-    "summary": "2026全球数字经济大会上，周鸿祎判断'AI对世界的重构将在5至10年内完成'，2026年已进入'智能体元年'。北京AI核心产业规模达4500亿元。",
-    "account": "AI科技大本营",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "AI产业正在围着OpenAI和Anthropic两家公司打转",
-    "link": "https://www.163.com/dy/article/L16CPRTJ05119734.html",
-    "published": "2026-07-06",
-    "summary": "深度分析AI产业链重组：前沿模型训练集中在两三家巨头，算力供应商纷纷转型，自研芯片潮兴起，英伟达AI加速器市场份额预计从86%降至75%。",
-    "account": "AI科技大本营",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "AI季报26Q2：从Coding到RSI，强者愈强的未来？",
-    "link": "https://news.qq.com/rain/a/20260706A058S600",
-    "published": "2026-07-06",
-    "summary": "Q2核心趋势：OpenAI Codex反扑Claude Code；RSI递归自进化成为最热方向；更多企业客户想要自己的模型，AI行业强者愈强格局进一步强化。",
-    "account": "AI科技大本营",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "微软砸25亿部署企业AI模式，成立Frontier Company帮客户从PoC到生产落地",
-    "link": "https://www.163.com/dy/article/L11UL0O705568W0A.html",
-    "published": "2026-07-05",
-    "summary": "微软投入25亿美元整合约6000名工程师成立Frontier Company，帮企业客户把AI从PoC推进到生产落地，承诺'模型无关'和'数据主权'。",
-    "account": "AI前线",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "微软、字节、福特都在高薪招人，AI前线部署工程师（FDE）成最热岗位",
-    "link": "https://36kr.com/p/3880071979694726",
-    "published": "2026-07-04",
-    "summary": "字节跳动为FDE开月薪3.5~7万（15薪，最高年薪105万），阿里云FDE月薪2~5万（16薪）。全球FDE招聘岗位2023-2025年增长42倍。",
-    "account": "AI前线",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "企业AI：方法论易得，交付力难求",
-    "link": "https://www.53ai.com/news/zhinenghuagaizao/2026070613092.html",
-    "published": "2026-07-06",
-    "summary": "全球AI总支出2026年预计达2.6万亿美元（同比增47%），多数企业卡在PoC到生产之间的鸿沟。阿里云发布'睿系列'RaaS产品。",
-    "account": "AI前线",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "白宫加速制定AI模型发布标准，新规或要求发布前先向审查机构开放",
-    "link": "https://stcn.com/article/detail/3994978.html",
-    "published": "2026-07-02",
-    "summary": "美国与OpenAI、Anthropic、谷歌等磋商，拟建'前沿模型'统一安全评估标准，新规或要求模型公开发布前先向特定审查机构开放访问。",
-    "account": "AI前线",
-    "read_count": 0,
-    "read_count_str": "-"
-  },
-  {
-    "title": "漏洞发现AI成为地缘政治角力焦点：美国Mythos vs 中国GLM-5.2",
-    "link": "https://www.iansresearch.com/resources/all-blogs/post/security-blog/2026/07/06/vulnerability-finding-ai-races-toward-commodity-status",
-    "published": "2026-07-06",
-    "summary": "美国GPT-5.6、Anthropic Mythos vs 中国GLM-5.2（智谱，MIT开源）、360倚天屠龙项目——AI驱动的漏洞发现能力正快速商品化，成为地缘政治角力新焦点。",
-    "account": "AI前线",
     "read_count": 0,
     "read_count_str": "-"
   }
