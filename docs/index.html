@@ -6,417 +6,330 @@
 <title>AI 日报 - 2026年07月07日</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#f5f5f7;--card-bg:#fff;--text:#1d1d1f;--text-secondary:#86868b;--text-tertiary:#aeaeb2;--accent:#0071e3;--accent-bg:#e8f0fe;--hot:#ff6b35;--hot-bg:#fff3ee;--border:#e5e5e5;--shadow:0 1px 3px rgba(0,0,0,0.04);--shadow-hover:0 4px 12px rgba(0,0,0,0.08)}
-@media(prefers-color-scheme:dark){:root{--bg:#1c1c1e;--card-bg:#2c2c2e;--text:#f5f5f7;--text-secondary:#98989d;--text-tertiary:#636366;--accent:#4da6ff;--accent-bg:#1a3a5c;--hot:#ff8c5a;--hot-bg:#3a2018;--border:#38383a;--shadow:0 1px 3px rgba(0,0,0,0.2);--shadow-hover:0 4px 12px rgba(0,0,0,0.3)}}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
-.header{background:var(--card-bg);padding:36px 24px 24px;text-align:center;border-bottom:1px solid var(--border)}
-.header h1{font-size:28px;font-weight:700;margin-bottom:6px}
-.subtitle{color:var(--text-secondary);font-size:14px}
-.stats{display:flex;justify-content:center;gap:24px;margin-top:14px;font-size:13px;color:var(--text-secondary);flex-wrap:wrap}
-.container{max-width:900px;margin:0 auto;padding:24px 20px 48px}
-.section-title{font-size:18px;font-weight:700;margin-bottom:16px}
+:root{
+  --bg:#f5f5f7;--card-bg:#fff;--text:#1d1d1f;--text-secondary:#86868b;
+  --text-tertiary:#aeaeb2;--accent:#0071e3;--accent-bg:#e8f0fe;
+  --hot:#ff6b35;--hot-bg:#fff3ee;--border:#e5e5e5;
+  --shadow:0 1px 3px rgba(0,0,0,0.04);
+  --h-padding:16px
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#1c1c1e;--card-bg:#2c2c2e;--text:#f5f5f7;--text-secondary:#98989d;
+  --text-tertiary:#636366;--accent:#4da6ff;--accent-bg:#1a3a5c;
+  --hot:#ff8c5a;--hot-bg:#3a2018;--border:#38383a;
+  --shadow:0 1px 3px rgba(0,0,0,0.2)
+}}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.5;
+  height:100vh;overflow:hidden;display:flex;flex-direction:column
+}
 
-/* Source Dashboard */
-.dashboard{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:32px}
-.source-card{background:var(--card-bg);border-radius:10px;padding:16px;text-align:center;box-shadow:var(--shadow);cursor:pointer;transition:all 0.2s}
-.source-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-1px)}
-.source-card.active{border:2px solid var(--accent)}
-.source-card h3{font-size:13px;font-weight:600;margin-bottom:6px;color:var(--accent)}
-.sc-count{font-size:20px;font-weight:700;display:block}
-.sc-reads{font-size:12px;color:var(--hot);margin-top:4px;display:block}
+/* === Header (compact) === */
+.header{
+  background:var(--card-bg);border-bottom:1px solid var(--border);
+  padding:10px 20px;display:flex;align-items:center;gap:16px;
+  flex-shrink:0
+}
+.header h1{font-size:18px;font-weight:700;white-space:nowrap}
+.header .meta{font-size:12px;color:var(--text-secondary);white-space:nowrap}
+.header .spacer{flex:1}
+.header .stats{display:flex;gap:16px;font-size:12px;color:var(--text-secondary)}
 
-/* Cards */
-.card{background:var(--card-bg);border-radius:12px;padding:18px 22px;margin-bottom:10px;box-shadow:var(--shadow);transition:box-shadow 0.2s}
-.card:hover{box-shadow:var(--shadow-hover)}
-.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.source-tag{font-size:11px;font-weight:600;color:var(--accent);background:var(--accent-bg);padding:2px 8px;border-radius:4px}
-.read-badge{font-size:12px;font-weight:600;color:var(--hot);background:var(--hot-bg);padding:2px 8px;border-radius:4px}
-.read-badge.empty{color:var(--text-tertiary);background:transparent}
-.card-title{font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.45}
-.card-title a{color:var(--text);text-decoration:none}
-.card-title a:hover{color:var(--accent)}
-.card-summary{font-size:13px;color:var(--text-secondary);margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.card-time{font-size:12px;color:var(--text-tertiary)}
+/* === Main: two columns === */
+.main{
+  display:flex;flex:1;overflow:hidden
+}
 
-/* Top 10 Hero */
-.hero-card{display:flex;align-items:flex-start;gap:14px;margin-bottom:10px}
-.hero-card .rank-badge{font-size:20px;font-weight:800;color:var(--accent);min-width:34px;text-align:center;line-height:1.2}
-.hero-card .card-content{flex:1}
+/* === Left Panel: Feed === */
+.left-panel{
+  width:380px;flex-shrink:0;border-right:1px solid var(--border);
+  display:flex;flex-direction:column;background:var(--card-bg)
+}
+.left-header{
+  padding:10px var(--h-padding);border-bottom:1px solid var(--border);
+  font-size:13px;font-weight:700;color:var(--text-secondary);
+  display:flex;justify-content:space-between;align-items:center;
+  flex-shrink:0
+}
+.left-header .count{font-size:12px;color:var(--text-tertiary);font-weight:400}
+.left-scroll{flex:1;overflow-y:auto}
 
-/* Expand */
-.expand-bar{text-align:center;margin:20px 0}
-.expand-btn{padding:10px 32px;border-radius:20px;border:1px solid var(--border);background:var(--card-bg);color:var(--accent);font-size:14px;font-weight:500;cursor:pointer;transition:all 0.2s}
-.expand-btn:hover{background:var(--accent-bg)}
+/* Feed item */
+.feed-item{
+  display:block;padding:10px var(--h-padding);border-bottom:1px solid var(--border);
+  cursor:pointer;transition:background 0.15s;text-decoration:none;color:inherit
+}
+.feed-item:hover,.feed-item.active{background:var(--accent-bg)}
+.feed-item .fi-rank{font-size:11px;font-weight:700;color:var(--accent);margin-bottom:2px}
+.feed-item .fi-title{font-size:14px;font-weight:500;line-height:1.35;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.feed-item .fi-meta{font-size:11px;color:var(--text-tertiary);margin-top:2px;
+  display:flex;gap:8px}
+.feed-item .fi-source{font-size:10px;font-weight:600;color:var(--accent);
+  background:var(--accent-bg);padding:1px 6px;border-radius:3px}
 
-/* Filter */
-.filter-bar{display:flex;justify-content:center;gap:8px;margin-bottom:16px;flex-wrap:wrap}
-.filter-btn{padding:5px 14px;border-radius:16px;border:1px solid var(--border);background:var(--card-bg);color:var(--text-secondary);font-size:12px;cursor:pointer;transition:all 0.2s}
-.filter-btn.active,.filter-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
-.hidden{display:none!important}
-#full-feed{display:none}
+/* === Right Panel: Source Groups === */
+.right-panel{flex:1;overflow-y:auto;padding:12px 20px 24px;background:var(--bg)}
 
-.footer{text-align:center;padding:28px 20px 40px;color:var(--text-tertiary);font-size:13px;line-height:1.8}
+.source-group{margin-bottom:20px}
+.source-group:last-child{margin-bottom:0}
+.sg-header{
+  display:flex;align-items:center;gap:10px;margin-bottom:8px;
+  padding-bottom:6px;border-bottom:1px solid var(--border)
+}
+.sg-header h3{font-size:14px;font-weight:700;color:var(--accent);white-space:nowrap}
+.sg-header .sg-count{font-size:12px;color:var(--text-tertiary);white-space:nowrap}
+
+.sg-articles{display:flex;flex-direction:column;gap:6px}
+
+/* Article card in source group */
+.sg-card{
+  display:flex;align-items:center;gap:12px;padding:8px 12px;
+  background:var(--card-bg);border-radius:8px;text-decoration:none;color:inherit;
+  box-shadow:var(--shadow);transition:box-shadow 0.15s
+}
+.sg-card:hover{box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+.sg-card .sg-title{flex:1;font-size:13px;font-weight:500;line-height:1.35;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sg-card .sg-date{font-size:11px;color:var(--text-tertiary);white-space:nowrap}
+.sg-card .sg-reads{font-size:11px;font-weight:600;color:var(--hot);white-space:nowrap}
+.sg-card.highlight{border:1px solid var(--accent);background:var(--accent-bg)}
+
+/* Empty source */
+.source-empty{font-size:12px;color:var(--text-tertiary);padding:8px 12px;
+  font-style:italic}
+
+/* === Footer (compact) === */
+.footer{
+  padding:6px 20px;text-align:center;font-size:11px;
+  color:var(--text-tertiary);border-top:1px solid var(--border);
+  background:var(--card-bg);flex-shrink:0
+}
 .footer a{color:var(--accent);text-decoration:none}
-@media(max-width:640px){.dashboard{grid-template-columns:repeat(2,1fr)}.header{padding:24px 16px}.header h1{font-size:22px}.container{padding:16px 12px 32px}.card{padding:14px 16px}.hero-card{flex-direction:column;gap:4px}}
+
+/* Selected source highlight */
+.source-group.highlight-group .sg-header h3{color:var(--hot)}
+
+/* Mobile */
+@media(max-width:768px){
+  .main{flex-direction:column}
+  .left-panel{width:100%;max-height:40vh;border-right:none;border-bottom:1px solid var(--border)}
+  .right-panel{max-height:60vh}
+  .header{padding:8px 12px;flex-wrap:wrap}
+  .header h1{font-size:16px}
+}
 </style>
 </head>
 <body>
 
 <header class="header">
-<h1>🤖 AI 日报</h1>
-<p class="subtitle">2026年07月07日 · 更新于 12:40 CST</p>
-<div class="stats">
-<span>📄 7 篇文章</span>
-<span>📡 3 个来源</span>
-</div>
+  <h1>🤖 AI 日报</h1>
+  <span class="meta">2026年07月07日 · 12:47</span>
+  <span class="spacer"></span>
+  <span class="stats">
+    <span>📄 7 篇</span>
+    <span>📡 3 来源</span>
+  </span>
 </header>
 
-<div class="container">
-
-<!-- Source Dashboard -->
-<div class="dashboard" id="dashboard">
-
-<div class="source-card" data-source="新智元" onclick="filterSource('新智元')">
-<h3>新智元</h3>
-<span class="sc-count">3 篇</span>
-
-</div>
-
-<div class="source-card" data-source="极客公园" onclick="filterSource('极客公园')">
-<h3>极客公园</h3>
-<span class="sc-count">3 篇</span>
-
-</div>
-
-<div class="source-card" data-source="Datawhale" onclick="filterSource('Datawhale')">
-<h3>Datawhale</h3>
-<span class="sc-count">1 篇</span>
-
-</div>
-
-</div>
-
-<!-- Top 10 -->
-<div class="section-title">🔥 今日精选</div>
-
-<article class="card hero-card">
-<span class="rank-badge">#1</span>
-<div class="card-content">
-<div class="card-top">
-<span class="source-tag">新智元</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=1&sn=f5fac6e598e30f5eaede9cf13c8912a5" target="_blank" rel="noopener">李飞飞LeCun疯狂加注！这匹中国黑马，已在因果AI暗战6年</a>
-</h2>
-
-<time class="card-time">2026-07-06</time>
-</div>
-</article>
-
-<article class="card hero-card">
-<span class="rank-badge">#2</span>
-<div class="card-content">
-<div class="card-top">
-<span class="source-tag">新智元</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=2&sn=c3f86d5d51f5a2046cbd992def846edb" target="_blank" rel="noopener">谷歌大佬盛赞Fable 5！23年前PC神作，40分钟塞进iPhone</a>
-</h2>
-
-<time class="card-time">2026-07-06</time>
-</div>
-</article>
-
-<article class="card hero-card">
-<span class="rank-badge">#3</span>
-<div class="card-content">
-<div class="card-top">
-<span class="source-tag">新智元</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=3&sn=0f0b4560c711e9ffefe372e390982b9b" target="_blank" rel="noopener">机器人看视频学操作！伯克利首次打通互联网视频到灵巧手真机部署链路</a>
-</h2>
-
-<time class="card-time">2026-07-06</time>
-</div>
-</article>
-
-<article class="card hero-card">
-<span class="rank-badge">#4</span>
-<div class="card-content">
-<div class="card-top">
-<span class="source-tag">极客公园</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109911&idx=1&sn=61d1a85869078c6912927ec6a220a71d" target="_blank" rel="noopener">治理与进化，如何成为企业级 Agent 的两条生死线？</a>
-</h2>
-
-<p class="card-summary">如何让 Agent 低成本、低风险地在企业级场景运行。</p>
-
-<time class="card-time">2026-07-06</time>
-</div>
-</article>
-
-<article class="card hero-card">
-<span class="rank-badge">#5</span>
-<div class="card-content">
-<div class="card-top">
-<span class="source-tag">极客公园</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109899&idx=1&sn=ca3e07d6f1cd0b0509da332ffe1c220f" target="_blank" rel="noopener">AI，正在替你「养」孩子</a>
-</h2>
-
-<p class="card-summary">「人工抚养」，未来可能成为一种特权？</p>
-
-<time class="card-time">2026-07-06</time>
-</div>
-</article>
-
-<article class="card hero-card">
-<span class="rank-badge">#6</span>
-<div class="card-content">
-<div class="card-top">
-<span class="source-tag">极客公园</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109893&idx=1&sn=a0e317a24f0699954b52ac211e56f4f3" target="_blank" rel="noopener">新能源乘用车平均车龄 1.8 年；iPhone 入选美国时间胶囊；Meta 推全新 AI 社交应用 | 极客早知道</a>
-</h2>
-
-<p class="card-summary">黑石集团终止美国弗吉尼亚州「数据门户」项目;消息称 Anthropic 拟在澳大利亚布局 1.4GW 数据中心算力，建设成本达 150 亿美元;春水堂伴侣机器人发布：1.5 万元起售</p>
-
-<time class="card-time">2026-07-06</time>
-</div>
-</article>
-
-<article class="card hero-card">
-<span class="rank-badge">#7</span>
-<div class="card-content">
-<div class="card-top">
-<span class="source-tag">Datawhale</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247724029&idx=1&sn=db001bc22850a7d9fd8c5fb6aff5932c" target="_blank" rel="noopener">7月11日杭州见，首个OPC能力全国总决赛来了！</a>
-</h2>
-
-<time class="card-time">2026-07-06</time>
-</div>
-</article>
-
-
-<!-- Expand -->
-<div class="expand-bar">
-<button class="expand-btn" onclick="toggleFullFeed()" id="expand-btn">查看全部 7 篇文章 ▼</button>
-</div>
-
-<!-- Full Feed (hidden) -->
-<div id="full-feed">
-<div class="filter-bar">
-<button class="filter-btn active" data-filter="all" onclick="filterSource('all')">全部</button>
-
-<button class="filter-btn" data-filter="新智元" onclick="filterSource('新智元')">新智元</button>
-
-<button class="filter-btn" data-filter="极客公园" onclick="filterSource('极客公园')">极客公园</button>
-
-<button class="filter-btn" data-filter="Datawhale" onclick="filterSource('Datawhale')">Datawhale</button>
-
-</div>
-<div class="filter-bar" style="margin-bottom:16px">
-<button class="filter-btn" onclick="sortFeed('heat')">🔥 按热度</button>
-<button class="filter-btn" onclick="sortFeed('time')">🕐 按时间</button>
-</div>
-
-
-<article class="card feed-card"
-         data-source="新智元"
-         data-read="0"
-         data-time="2026-07-06">
-<div class="card-top">
-<span class="source-tag">新智元</span>
-
-<span class="read-badge empty">—</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=1&sn=f5fac6e598e30f5eaede9cf13c8912a5" target="_blank" rel="noopener">李飞飞LeCun疯狂加注！这匹中国黑马，已在因果AI暗战6年</a>
-</h2>
-
-<time class="card-time">2026-07-06</time>
-</article>
-
-<article class="card feed-card"
-         data-source="新智元"
-         data-read="0"
-         data-time="2026-07-06">
-<div class="card-top">
-<span class="source-tag">新智元</span>
-
-<span class="read-badge empty">—</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=2&sn=c3f86d5d51f5a2046cbd992def846edb" target="_blank" rel="noopener">谷歌大佬盛赞Fable 5！23年前PC神作，40分钟塞进iPhone</a>
-</h2>
-
-<time class="card-time">2026-07-06</time>
-</article>
-
-<article class="card feed-card"
-         data-source="新智元"
-         data-read="0"
-         data-time="2026-07-06">
-<div class="card-top">
-<span class="source-tag">新智元</span>
-
-<span class="read-badge empty">—</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=3&sn=0f0b4560c711e9ffefe372e390982b9b" target="_blank" rel="noopener">机器人看视频学操作！伯克利首次打通互联网视频到灵巧手真机部署链路</a>
-</h2>
-
-<time class="card-time">2026-07-06</time>
-</article>
-
-<article class="card feed-card"
-         data-source="极客公园"
-         data-read="0"
-         data-time="2026-07-06">
-<div class="card-top">
-<span class="source-tag">极客公园</span>
-
-<span class="read-badge empty">—</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109911&idx=1&sn=61d1a85869078c6912927ec6a220a71d" target="_blank" rel="noopener">治理与进化，如何成为企业级 Agent 的两条生死线？</a>
-</h2>
-
-<p class="card-summary">如何让 Agent 低成本、低风险地在企业级场景运行。</p>
-
-<time class="card-time">2026-07-06</time>
-</article>
-
-<article class="card feed-card"
-         data-source="极客公园"
-         data-read="0"
-         data-time="2026-07-06">
-<div class="card-top">
-<span class="source-tag">极客公园</span>
-
-<span class="read-badge empty">—</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109899&idx=1&sn=ca3e07d6f1cd0b0509da332ffe1c220f" target="_blank" rel="noopener">AI，正在替你「养」孩子</a>
-</h2>
-
-<p class="card-summary">「人工抚养」，未来可能成为一种特权？</p>
-
-<time class="card-time">2026-07-06</time>
-</article>
-
-<article class="card feed-card"
-         data-source="极客公园"
-         data-read="0"
-         data-time="2026-07-06">
-<div class="card-top">
-<span class="source-tag">极客公园</span>
-
-<span class="read-badge empty">—</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109893&idx=1&sn=a0e317a24f0699954b52ac211e56f4f3" target="_blank" rel="noopener">新能源乘用车平均车龄 1.8 年；iPhone 入选美国时间胶囊；Meta 推全新 AI 社交应用 | 极客早知道</a>
-</h2>
-
-<p class="card-summary">黑石集团终止美国弗吉尼亚州「数据门户」项目;消息称 Anthropic 拟在澳大利亚布局 1.4GW 数据中心算力，建设成本达 150 亿美元;春水堂伴侣机器人发布：1.5 万元起售</p>
-
-<time class="card-time">2026-07-06</time>
-</article>
-
-<article class="card feed-card"
-         data-source="Datawhale"
-         data-read="0"
-         data-time="2026-07-06">
-<div class="card-top">
-<span class="source-tag">Datawhale</span>
-
-<span class="read-badge empty">—</span>
-
-</div>
-<h2 class="card-title">
-<a href="https://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247724029&idx=1&sn=db001bc22850a7d9fd8c5fb6aff5932c" target="_blank" rel="noopener">7月11日杭州见，首个OPC能力全国总决赛来了！</a>
-</h2>
-
-<time class="card-time">2026-07-06</time>
-</article>
-
-</div>
+<div class="main">
+
+<!-- ====== Left: Feed ====== -->
+<aside class="left-panel">
+  <div class="left-header">
+    <span>🔥 今日精选</span>
+    <span class="count">Top 7</span>
+  </div>
+  <nav class="left-scroll" id="feed-list">
+    
+    <a class="feed-item" href="#新智元" data-source="新智元"
+       onclick="highlightSource('新智元')" title="李飞飞LeCun疯狂加注！这匹中国黑马，已在因果AI暗战6年">
+      <div class="fi-rank">#1</div>
+      <div class="fi-title">李飞飞LeCun疯狂加注！这匹中国黑马，已在因果AI暗战6年</div>
+      <div class="fi-meta">
+        <span class="fi-source">新智元</span>
+        <span>2026-07-06</span>
+      </div>
+    </a>
+    
+    <a class="feed-item" href="#新智元" data-source="新智元"
+       onclick="highlightSource('新智元')" title="谷歌大佬盛赞Fable 5！23年前PC神作，40分钟塞进iPhone">
+      <div class="fi-rank">#2</div>
+      <div class="fi-title">谷歌大佬盛赞Fable 5！23年前PC神作，40分钟塞进iPhone</div>
+      <div class="fi-meta">
+        <span class="fi-source">新智元</span>
+        <span>2026-07-06</span>
+      </div>
+    </a>
+    
+    <a class="feed-item" href="#新智元" data-source="新智元"
+       onclick="highlightSource('新智元')" title="机器人看视频学操作！伯克利首次打通互联网视频到灵巧手真机部署链路">
+      <div class="fi-rank">#3</div>
+      <div class="fi-title">机器人看视频学操作！伯克利首次打通互联网视频到灵巧手真机部署链路</div>
+      <div class="fi-meta">
+        <span class="fi-source">新智元</span>
+        <span>2026-07-06</span>
+      </div>
+    </a>
+    
+    <a class="feed-item" href="#极客公园" data-source="极客公园"
+       onclick="highlightSource('极客公园')" title="治理与进化，如何成为企业级 Agent 的两条生死线？">
+      <div class="fi-rank">#4</div>
+      <div class="fi-title">治理与进化，如何成为企业级 Agent 的两条生死线？</div>
+      <div class="fi-meta">
+        <span class="fi-source">极客公园</span>
+        <span>2026-07-06</span>
+      </div>
+    </a>
+    
+    <a class="feed-item" href="#极客公园" data-source="极客公园"
+       onclick="highlightSource('极客公园')" title="AI，正在替你「养」孩子">
+      <div class="fi-rank">#5</div>
+      <div class="fi-title">AI，正在替你「养」孩子</div>
+      <div class="fi-meta">
+        <span class="fi-source">极客公园</span>
+        <span>2026-07-06</span>
+      </div>
+    </a>
+    
+    <a class="feed-item" href="#极客公园" data-source="极客公园"
+       onclick="highlightSource('极客公园')" title="新能源乘用车平均车龄 1.8 年；iPhone 入选美国时间胶囊；Meta 推全新 AI 社交应用 | 极客早知道">
+      <div class="fi-rank">#6</div>
+      <div class="fi-title">新能源乘用车平均车龄 1.8 年；iPhone 入选美国时间胶囊；Meta 推全新 AI 社交应用 | 极客早知道</div>
+      <div class="fi-meta">
+        <span class="fi-source">极客公园</span>
+        <span>2026-07-06</span>
+      </div>
+    </a>
+    
+    <a class="feed-item" href="#Datawhale" data-source="Datawhale"
+       onclick="highlightSource('Datawhale')" title="7月11日杭州见，首个OPC能力全国总决赛来了！">
+      <div class="fi-rank">#7</div>
+      <div class="fi-title">7月11日杭州见，首个OPC能力全国总决赛来了！</div>
+      <div class="fi-meta">
+        <span class="fi-source">Datawhale</span>
+        <span>2026-07-06</span>
+      </div>
+    </a>
+    
+  </nav>
+</aside>
+
+<!-- ====== Right: Source Groups ====== -->
+<main class="right-panel" id="source-groups">
+
+  
+  <section class="source-group" id="新智元">
+    <div class="sg-header">
+      <h3>新智元</h3>
+      <span class="sg-count">3 篇</span>
+      
+    </div>
+    <div class="sg-articles">
+      
+      <a class="sg-card" href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=1&sn=f5fac6e598e30f5eaede9cf13c8912a5" target="_blank" rel="noopener"
+         data-source="新智元">
+        <span class="sg-title">李飞飞LeCun疯狂加注！这匹中国黑马，已在因果AI暗战6年</span>
+        
+        <span class="sg-date">2026-07-06</span>
+      </a>
+      
+      <a class="sg-card" href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=2&sn=c3f86d5d51f5a2046cbd992def846edb" target="_blank" rel="noopener"
+         data-source="新智元">
+        <span class="sg-title">谷歌大佬盛赞Fable 5！23年前PC神作，40分钟塞进iPhone</span>
+        
+        <span class="sg-date">2026-07-06</span>
+      </a>
+      
+      <a class="sg-card" href="https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710873&idx=3&sn=0f0b4560c711e9ffefe372e390982b9b" target="_blank" rel="noopener"
+         data-source="新智元">
+        <span class="sg-title">机器人看视频学操作！伯克利首次打通互联网视频到灵巧手真机部署链路</span>
+        
+        <span class="sg-date">2026-07-06</span>
+      </a>
+      
+    </div>
+  </section>
+  
+  <section class="source-group" id="极客公园">
+    <div class="sg-header">
+      <h3>极客公园</h3>
+      <span class="sg-count">3 篇</span>
+      
+    </div>
+    <div class="sg-articles">
+      
+      <a class="sg-card" href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109911&idx=1&sn=61d1a85869078c6912927ec6a220a71d" target="_blank" rel="noopener"
+         data-source="极客公园">
+        <span class="sg-title">治理与进化，如何成为企业级 Agent 的两条生死线？</span>
+        
+        <span class="sg-date">2026-07-06</span>
+      </a>
+      
+      <a class="sg-card" href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109899&idx=1&sn=ca3e07d6f1cd0b0509da332ffe1c220f" target="_blank" rel="noopener"
+         data-source="极客公园">
+        <span class="sg-title">AI，正在替你「养」孩子</span>
+        
+        <span class="sg-date">2026-07-06</span>
+      </a>
+      
+      <a class="sg-card" href="https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653109893&idx=1&sn=a0e317a24f0699954b52ac211e56f4f3" target="_blank" rel="noopener"
+         data-source="极客公园">
+        <span class="sg-title">新能源乘用车平均车龄 1.8 年；iPhone 入选美国时间胶囊；Meta 推全新 AI 社交应用 | 极客早知道</span>
+        
+        <span class="sg-date">2026-07-06</span>
+      </a>
+      
+    </div>
+  </section>
+  
+  <section class="source-group" id="Datawhale">
+    <div class="sg-header">
+      <h3>Datawhale</h3>
+      <span class="sg-count">1 篇</span>
+      
+    </div>
+    <div class="sg-articles">
+      
+      <a class="sg-card" href="https://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&mid=2247724029&idx=1&sn=db001bc22850a7d9fd8c5fb6aff5932c" target="_blank" rel="noopener"
+         data-source="Datawhale">
+        <span class="sg-title">7月11日杭州见，首个OPC能力全国总决赛来了！</span>
+        
+        <span class="sg-date">2026-07-06</span>
+      </a>
+      
+    </div>
+  </section>
+  
+
+</main>
 
 </div>
 
 <footer class="footer">
-<p>数据来源：微信公众号 · 通过 <a href="https://wechat2rss.xlab.app" target="_blank">Wechat2RSS</a> 抓取</p>
-<p>每日更新 · <a href="https://github.com/Sloane-tree/ai-daily" target="_blank">GitHub</a></p>
+  数据来源：微信公众号 · <a href="https://wechat2rss.xlab.app" target="_blank">Wechat2RSS</a> ·
+  <a href="https://github.com/Sloane-tree/ai-daily" target="_blank">GitHub</a>
 </footer>
 
 <script>
-function toggleFullFeed() {
-    var feed = document.getElementById('full-feed');
-    var btn = document.getElementById('expand-btn');
-    if (feed.style.display === 'none' || feed.style.display === '') {
-        feed.style.display = 'block';
-        btn.textContent = '收起 ▲';
-    } else {
-        feed.style.display = 'none';
-        btn.textContent = '查看全部 7 篇文章 ▼';
-    }
-}
+function highlightSource(source) {
+  // Remove previous highlights
+  document.querySelectorAll('.feed-item.active').forEach(function(el){ el.classList.remove('active'); });
+  document.querySelectorAll('.source-group.highlight-group').forEach(function(el){ el.classList.remove('highlight-group'); });
+  document.querySelectorAll('.sg-card.highlight').forEach(function(el){ el.classList.remove('highlight'); });
 
-function filterSource(source) {
-    var cards = document.querySelectorAll('#full-feed .feed-card');
-    cards.forEach(function(c) {
-        if (source === 'all' || c.getAttribute('data-source') === source) {
-            c.classList.remove('hidden');
-        } else {
-            c.classList.add('hidden');
-        }
-    });
-    // Toggle active state on filter buttons
-    document.querySelectorAll('#full-feed .filter-btn[data-filter]').forEach(function(b) {
-        b.classList.toggle('active', b.getAttribute('data-filter') === source);
-    });
-    // Toggle dashboard cards
-    document.querySelectorAll('#dashboard .source-card').forEach(function(c) {
-        c.classList.toggle('active', c.getAttribute('data-source') === source);
-    });
-}
+  // Highlight selected feed item
+  var items = document.querySelectorAll('.feed-item[data-source="'+source+'"]');
+  items.forEach(function(el){ el.classList.add('active'); });
 
-function sortFeed(mode) {
-    var container = document.getElementById('full-feed');
-    var cards = Array.from(container.querySelectorAll('.feed-card'));
-    cards.sort(function(a, b) {
-        if (mode === 'heat') {
-            var ra = parseInt(a.getAttribute('data-read')) || 0;
-            var rb = parseInt(b.getAttribute('data-read')) || 0;
-            if (ra !== rb) return rb - ra;
-            return (b.getAttribute('data-time') || '').localeCompare(a.getAttribute('data-time') || '');
-        } else {
-            var ta = a.getAttribute('data-time') || '';
-            var tb = b.getAttribute('data-time') || '';
-            if (ta !== tb) return tb.localeCompare(ta);
-            return (parseInt(b.getAttribute('data-read')) || 0) - (parseInt(a.getAttribute('data-read')) || 0);
-        }
-    });
-    cards.forEach(function(c) { container.appendChild(c); });
+  // Highlight the source group and its cards
+  var group = document.getElementById(source);
+  if (group) {
+    group.classList.add('highlight-group');
+    group.querySelectorAll('.sg-card').forEach(function(c){ c.classList.add('highlight'); });
+    group.scrollIntoView({behavior:'smooth',block:'start'});
+  }
 }
 </script>
 
